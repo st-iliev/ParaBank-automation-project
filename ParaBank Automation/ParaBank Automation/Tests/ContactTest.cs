@@ -11,7 +11,7 @@ namespace ParaBank_Automation.Tests
 {
     internal class ContactTest : BaseTest
     {
-        private string formText = "Email support is available by filling out the following form.";
+       
         [Test]
         public void CheckPageHeadingText()
         {
