@@ -11,7 +11,7 @@ namespace ParaBank_Automation.Tests
 {
     public class BaseTest
     {    
-            protected IWebDriver driver;
+            public IWebDriver driver;
 
             [OneTimeSetUp]
             public void Setup()
@@ -19,7 +19,7 @@ namespace ParaBank_Automation.Tests
                 driver = new ChromeDriver();
                 driver.Manage().Window.Maximize();
             }
-
+        
             [OneTimeTearDown]
             public void ShutDown()
             {

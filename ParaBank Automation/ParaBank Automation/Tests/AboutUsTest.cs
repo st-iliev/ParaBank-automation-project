@@ -11,6 +11,7 @@ namespace ParaBank_Automation.Tests
 {
     internal class AboutUsTest : BaseTest
     {
+        
         [Test]
         public void OpenAboutUsPage()
         {
