@@ -78,5 +78,13 @@ namespace ParaBank_Automation.Tests
             string welcomeMessage = driver.FindElement(By.XPath("//p[@class='smallText']")).Text;
             Assert.AreEqual(SuccessfullyMessages.welcome,welcomeMessage);
         }
+        [Test]
+        public void VerifyForgotLoginInfoRedirectToCorrectPage()
+        {
+            var page = new LoginPanel(driver);
+            page.Open();
+            page.forgotLogInInfo.Click();
+            Assert.That(currentUrl, Is.EqualTo("https://parabank.parasoft.com/parabank/lookup.htm"));
+        }
     }
 }

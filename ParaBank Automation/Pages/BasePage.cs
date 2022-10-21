@@ -22,6 +22,7 @@ namespace ParaBank_Automation.Pages
         public IWebElement products => driver.FindElement(By.XPath("//a[@href='http://www.parasoft.com/jsp/products.jsp']"));
         public IWebElement locations => driver.FindElement(By.XPath("//a[@href='http://www.parasoft.com/jsp/pr/contacts.jsp']"));
         public IWebElement adminPage => driver.FindElement(By.XPath("//a[@href='admin.htm']"));
+        public IReadOnlyCollection<IWebElement> footerElements => driver.FindElements(By.XPath("//*[@id='footerPanel']/ul[1]/li"));
         public IWebElement footerHome => driver.FindElement(By.XPath("//*[@id='footerPanel']/ul/li/a[contains(text(),'Home')]"));
         public IWebElement footerAboutUs => driver.FindElement(By.XPath("//*[@id='footerPanel']/ul/li/a[contains(text(),'About Us')]"));
         public IWebElement footerServices => driver.FindElement(By.XPath("//*[@id='footerPanel']/ul/li/a[contains(text(),'Services')]"));

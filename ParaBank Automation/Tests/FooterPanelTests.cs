@@ -16,15 +16,16 @@ namespace ParaBank_Automation.Tests
         {
             var basePage = new HomePage(driver);
             basePage.Open();
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerHome));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerAboutUs));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerServices));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerProducts));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerLocations));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerForum));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerSiteMap));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.footerContactUs));
-            Assert.IsTrue(basePage.IsElementVisible(basePage.copyRightText));
+
+            Assert.AreEqual(8, basePage.footerElements.Count);
+            Assert.IsTrue(basePage.footerHome.Displayed);
+            Assert.IsTrue(basePage.footerAboutUs.Displayed);
+            Assert.IsTrue(basePage.footerServices.Displayed);
+            Assert.IsTrue(basePage.footerProducts.Displayed);
+            Assert.IsTrue(basePage.footerLocations.Displayed);
+            Assert.IsTrue(basePage.footerForum.Displayed);
+            Assert.IsTrue(basePage.footerSiteMap.Displayed);
+            Assert.IsTrue(basePage.footerContactUs.Displayed);
         }
         [Test]
         public void VerifyFooterHomeRedirectToCorrectPage()

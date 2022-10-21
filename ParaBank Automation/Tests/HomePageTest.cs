@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Tests
 {
-    internal class HomePageTest
+    internal class HomePageTest : BaseTest
     {
 
     }

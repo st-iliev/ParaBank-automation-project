@@ -18,7 +18,7 @@ namespace ParaBank_Automation.Pages
         public IWebElement usernameField => driver.FindElement(By.XPath("//input[@name='username']"));
         public IWebElement passwordField => driver.FindElement(By.XPath("//input[@name='password']"));
         public IWebElement loginButton => driver.FindElement(By.XPath("//input[@class='button']"));
-        public IWebElement forgotLogInInfo => driver.FindElement(By.XPath("//form[@href='lookup.htm']"));
+        public IWebElement forgotLogInInfo => driver.FindElement(By.XPath("//*[@id='loginPanel']/p[1]/a"));
         public IWebElement register => driver.FindElement(By.XPath("//form[@href='register.htm']"));
 
         public void FilledLogInForm(string username , string password)
