@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
+using ParaBank_Automation.Pages.Panels;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +11,7 @@ namespace ParaBank_Automation.Pages
     public  class BasePage
     {
         protected IWebDriver driver;
+       
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
@@ -35,6 +36,5 @@ namespace ParaBank_Automation.Pages
         public string GetPageHeadingText() => pageHeading.Text;
         public string GetPageText() => pageText.Text;
         public bool IsElementVisible(IWebElement element) => element.Displayed ? true : false;
-
     }
 }
