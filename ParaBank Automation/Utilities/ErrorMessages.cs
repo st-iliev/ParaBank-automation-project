@@ -25,5 +25,11 @@ namespace ParaBank_Automation.Utilities
         public const string enterUsernameAndPassword = "Please enter a username and password.";
         public const string wrongUsernameOrPassword = "An internal error has occurred and has been logged.";
         public const string errorHeadingText = "Error!";
+        public const string amount = "The amount cannot be empty.";
+        public const string payeeName = "Payee name is required.";
+        public const string phoneNumber = "Phone number is required.";
+        public const string accountNumber = "Account number is required.";
+        public const string validNumber = "Please enter a valid number.";
+        public const string validAmount = "Please enter a valid amount.";
     }
 }
