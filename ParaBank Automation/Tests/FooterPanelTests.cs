@@ -1,11 +1,7 @@
 ﻿using NUnit.Framework;
 using ParaBank_Automation.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using ParaBank_Automation.Pages.Panels;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Tests
 {
@@ -14,23 +10,23 @@ namespace ParaBank_Automation.Tests
         [Test]
         public void VerifyFooterPanelElements()
         {
-            var basePage = new HomePage(driver);
-            basePage.Open();
+            var page = new FooterPanel(driver);
+            page.Open();
 
-            Assert.AreEqual(8, basePage.footerElements.Count);
-            Assert.IsTrue(basePage.footerHome.Displayed);
-            Assert.IsTrue(basePage.footerAboutUs.Displayed);
-            Assert.IsTrue(basePage.footerServices.Displayed);
-            Assert.IsTrue(basePage.footerProducts.Displayed);
-            Assert.IsTrue(basePage.footerLocations.Displayed);
-            Assert.IsTrue(basePage.footerForum.Displayed);
-            Assert.IsTrue(basePage.footerSiteMap.Displayed);
-            Assert.IsTrue(basePage.footerContactUs.Displayed);
+            Assert.AreEqual(8,page.footerElements.Count);
+            Assert.IsTrue(page.footerHome.Displayed);
+            Assert.IsTrue(page.footerAboutUs.Displayed);
+            Assert.IsTrue(page.footerServices.Displayed);
+            Assert.IsTrue(page.footerProducts.Displayed);
+            Assert.IsTrue(page.footerLocations.Displayed);
+            Assert.IsTrue(page.footerForum.Displayed);
+            Assert.IsTrue(page.footerSiteMap.Displayed);
+            Assert.IsTrue(page.footerContactUs.Displayed);
         }
         [Test]
         public void VerifyFooterHomeRedirectToCorrectPage()
         {
-            var page = new HomePage(driver);
+            var page = new FooterPanel(driver);
             page.Open();
             page.contactButton.Click();
             page.footerHome.Click();
@@ -39,7 +35,7 @@ namespace ParaBank_Automation.Tests
         [Test]
         public void VerifyFooterAboutUsRedirectToCorrectPage()
         {
-            var page = new AboutUs(driver);
+            var page = new FooterPanel(driver);
             page.Open();
             Thread.Sleep(100);
             page.footerAboutUs.Click();
@@ -49,7 +45,7 @@ namespace ParaBank_Automation.Tests
         [Test]
         public void VerifyFooterServicesRedirectToCorrectPage()
         {
-            var page = new AboutUs(driver);
+            var page = new FooterPanel(driver);
             page.Open();
             Thread.Sleep(100);
             page.footerServices.Click();

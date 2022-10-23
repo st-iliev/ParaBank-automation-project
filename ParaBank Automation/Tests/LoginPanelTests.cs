@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using ParaBank_Automation.Pages;
+using ParaBank_Automation.Pages.Panels;
 using ParaBank_Automation.Utilities;
 using System;
 using System.Collections.Generic;
