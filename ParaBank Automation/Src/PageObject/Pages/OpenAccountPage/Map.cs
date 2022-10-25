@@ -9,9 +9,9 @@ namespace ParaBank_Automation.Src
 {
     public partial class OpenAccountPage
     {
-        public IWebElement accountType => driver.FindElement(By.XPath("//*[@id='type']"));
-        public IWebElement fromAccountId => driver.FindElement(By.XPath("//*[@id='fromAccountId']"));
-        public IWebElement openNewAccountButton => driver.FindElement(By.XPath("//*[@value='Open New Account']"));
-        public IWebElement newAccountId => driver.FindElement(By.XPath("//*[@id='newAccountId']"));
+        public IWebElement accountType => WaitAndFindElement(By.XPath("//*[@id='type']"));
+        public IWebElement fromAccountId => WaitAndFindElement(By.XPath("//*[@id='fromAccountId']"));
+        public IWebElement openNewAccountButton => WaitAndFindElement(By.XPath("//*[@value='Open New Account']"));
+        public IWebElement newAccountId => WaitAndFindElement(By.XPath("//*[@id='newAccountId']"));
     }
 }

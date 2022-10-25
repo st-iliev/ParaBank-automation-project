@@ -9,8 +9,8 @@ namespace ParaBank_Automation.Src
 {
     public partial class AccountOverview
     {
-        public IWebElement firstAccount => driver.FindElement(By.XPath("//*[@id='accountTable']/tbody/tr[1]/td[1]/a"));
-        public IList<IWebElement> allAccounts => driver.FindElements(By.XPath("//*[@id='accountTable']/tbody/tr"));
-        public IWebElement totalAmount => driver.FindElement(By.XPath("//*[@id='accountTable']/tbody/tr[" + accountsNumbers() + "]"));
+        public IWebElement firstAccount => WaitAndFindElement(By.XPath("//*[@id='accountTable']/tbody/tr[1]/td[1]/a"));
+        public IWebElement allAccounts => WaitAndFindElement(By.XPath("//*[@id='accountTable']/tbody/tr"));
+        // TODO public IWebElement totalAmount => WaitAndFindElement(By.XPath("//*[@id='accountTable']/tbody/tr[" + accountsNumbers() + "]"));
     }
 }

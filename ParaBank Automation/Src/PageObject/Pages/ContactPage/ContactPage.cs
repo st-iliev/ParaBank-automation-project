@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace ParaBank_Automation.Src
 {
     public partial class ContactPage : BasePage
     {
+       
         public ContactPage(IWebDriver driver) : base(driver)
         {
-
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/contact.htm";
         
