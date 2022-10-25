@@ -12,7 +12,7 @@ namespace ParaBank_Automation.Src
         public OpenAccountPage(IWebDriver driver) : base(driver)
         {
         }
-      
+        public override string PageURL => throw new System.NotImplementedException();
 
     }
 }

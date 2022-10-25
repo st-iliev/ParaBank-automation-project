@@ -9,15 +9,15 @@ namespace ParaBank_Automation.Src
 { 
     public partial class ContactPage
     {
-        public IWebElement nameField => driver.FindElement(By.XPath("//*[@id='name']"));
-        public IWebElement emailField => driver.FindElement(By.XPath("//*[@id='email']"));
-        public IWebElement phoneField => driver.FindElement(By.XPath("//*[@id='phone']"));
-        public IWebElement messageField => driver.FindElement(By.XPath("//*[@id='message']"));
-        public IWebElement sendButton => driver.FindElement(By.XPath("//*[@id='contactForm']//input[@type='submit']"));
-        public IWebElement nameErrorMessage => driver.FindElement(By.XPath("//*[@id='name.errors']"));
-        public IWebElement emailErrorMessage => driver.FindElement(By.XPath("//*[@id='email.errors']"));
-        public IWebElement phoneErrorMessage => driver.FindElement(By.XPath("//*[@id='phone.errors']"));
-        public IWebElement messageErrorMessage => driver.FindElement(By.XPath("//*[@id='message.errors']"));
-        public IWebElement successfullyMessage => driver.FindElement(By.XPath("//*[@id='rightPanel']/p[1]"));
+        public IWebElement nameField => WaitAndFindElement(By.XPath("//*[@id='name']"));
+        public IWebElement emailField => WaitAndFindElement(By.XPath("//*[@id='email']"));
+        public IWebElement phoneField => WaitAndFindElement(By.XPath("//*[@id='phone']"));
+        public IWebElement messageField => WaitAndFindElement(By.XPath("//*[@id='message']"));
+        public IWebElement sendButton => WaitAndFindElement(By.XPath("//*[@id='contactForm']//input[@type='submit']"));
+        public IWebElement nameErrorMessage => WaitAndFindElement(By.XPath("//*[@id='name.errors']"));
+        public IWebElement emailErrorMessage => WaitAndFindElement(By.XPath("//*[@id='email.errors']"));
+        public IWebElement phoneErrorMessage => WaitAndFindElement(By.XPath("//*[@id='phone.errors']"));
+        public IWebElement messageErrorMessage => WaitAndFindElement(By.XPath("//*[@id='message.errors']"));
+        public IWebElement successfullyMessage => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/p[1]"));
     }
 }

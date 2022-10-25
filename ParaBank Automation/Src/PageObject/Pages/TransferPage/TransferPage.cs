@@ -15,10 +15,6 @@ namespace ParaBank_Automation.Src
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/transfer.htm";
 
-        public IWebElement amountField => driver.FindElement(By.XPath("//*[@id='amount']"));
-        public IWebElement fromAccountField => driver.FindElement(By.XPath("//*[@id='fromAccountId']"));
-        public IWebElement toAccountField => driver.FindElement(By.XPath("//*[@id='toAccountId']"));
-        public IWebElement transferButton => driver.FindElement(By.XPath("//*[@value='Transfer']"));
-        public IWebElement amountErrorMessage => driver.FindElement(By.XPath("//*[@id='toAccountId']"));
+      
     }
 }

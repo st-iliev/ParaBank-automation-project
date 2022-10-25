@@ -1,35 +1,30 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using System;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace ParaBank_Automation.Src
 {
-    public  class BasePage
-    {
-        protected IWebDriver driver;
-       
+    public abstract class BasePage
+    { 
+        private int elementsTimeout = 10;
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            waitDriver = new WebDriverWait(driver,TimeSpan.FromSeconds(elementsTimeout));
         }
-      
-      
-        public virtual string PageURL { get; }
-        //protected IWebElement WaitAndFindElement(By locator)
-        //{
-        //    return WebDriverWait.Until(ExpectedConditions.ElementExists(locator));
-        //}
-        protected void WaitForElementById(IWebElement element)
-        {
-            WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, 30));
-            wait.Until(d => d.FindElement(By.XPath(element.GetAttribute("xpath"))));
-        }
+        protected IWebDriver driver { get; set; }
+        protected WebDriverWait waitDriver { get; set; }  
+        public abstract string PageURL { get; }
         public void Open() => driver.Navigate().GoToUrl(PageURL);
-        public bool IsOpen() => driver.Url == PageURL;
+        protected virtual void WaitForPageLoad()
+        {
+        }
+        protected IWebElement WaitAndFindElement(By locator)
+        {
+            WebDriverWait w = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+           return w.Until(ExpectedConditions.ElementExists(locator));   
+        }
         public string GetPageTitle() => driver.Title;
-        public string GetPageHeadingText() => pageHeading.Text;
-        public string GetPageText() => pageText.Text;
-        public bool IsElementVisible(IWebElement element) => element.Displayed ? true : false;
     }
 }

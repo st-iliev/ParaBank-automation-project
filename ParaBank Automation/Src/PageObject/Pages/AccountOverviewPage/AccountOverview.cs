@@ -17,7 +17,7 @@ namespace ParaBank_Automation.Src
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/overview.htm";
        
-        public int accountsNumbers() => allAccounts.Count;
+        
 
     }
 }
