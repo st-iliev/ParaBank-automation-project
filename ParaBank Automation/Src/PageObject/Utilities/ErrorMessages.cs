@@ -31,5 +31,6 @@ namespace ParaBank_Automation.Utilities
         public const string accountNumber = "Account number is required.";
         public const string validNumber = "Please enter a valid number.";
         public const string validAmount = "Please enter a valid amount.";
+        public const string downPayment = "We cannot grant a loan in that amount with your available funds and down payment.";
     }
 }

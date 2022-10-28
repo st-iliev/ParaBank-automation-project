@@ -26,5 +26,6 @@ namespace ParaBank_Automation.Src
            return w.Until(ExpectedConditions.ElementExists(locator));   
         }
         public string GetPageTitle() => driver.Title;
+        public string GetPageText() => WaitAndFindElement(By.XPath("//h1[@class='title']/p[1]")).Text;
     }
 }
