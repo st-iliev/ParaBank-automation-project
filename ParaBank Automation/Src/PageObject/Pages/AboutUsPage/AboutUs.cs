@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Src
 {
-    internal class AboutUs : BasePage
+    public partial class AboutUs : BasePage
     {
         public AboutUs(IWebDriver driver) : base(driver)
         {
 
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/about.htm";
+
+
     }
 }
 

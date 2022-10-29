@@ -14,9 +14,9 @@ namespace ParaBank_Automation.Src
         {
             Assert.AreEqual(ErrorMessages.amount, amountErrorMessage.Text);
         }
-        public void AssertTransferIsCompleted()
+        public void AssertTransferIsCompleted(int amount, int fromAccountId, int toAccountId)
         {
-            Assert.AreEqual(SuccessfullyMessages.transferComplete, GetPageText());
+            Assert.AreEqual(string.Format(SuccessMessages.transferComplete,amount.ToString(),fromAccountId.ToString(),toAccountId.ToString()), GetPageText());
         }
     }
 }

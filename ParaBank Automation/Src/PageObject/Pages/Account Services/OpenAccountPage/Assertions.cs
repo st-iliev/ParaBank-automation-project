@@ -8,7 +8,7 @@ namespace ParaBank_Automation.Src
     {
        public void AssertNewAccountIsSuccessfullyOpened()
         {
-            Assert.AreEqual(SuccessfullyMessages.newAccount, GetPageText());
+            Assert.AreEqual(SuccessMessages.newAccount, GetPageText());
         }
     }
 }

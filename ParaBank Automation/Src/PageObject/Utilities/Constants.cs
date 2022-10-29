@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Utilities
 {
-    public class Constants
+    public static class Constants
     {
         public const string firstName = "Yanis";
         public const string lastName = "Yanisov";

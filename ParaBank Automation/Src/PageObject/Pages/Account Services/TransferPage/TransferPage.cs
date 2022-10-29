@@ -14,7 +14,16 @@ namespace ParaBank_Automation.Src
 
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/transfer.htm";
-
+        public void FillTransferFundsForm(int amount,int fromAccountId,int toAccountId)
+        {
+            amountField.SendKeys(amount.ToString());
+            fromAccountField.SendKeys(fromAccountId.ToString());
+            toAccountField.SendKeys(toAccountId.ToString());
+        }
+        public void TransferFunds()
+        {
+            transferButton.Click();
+        }
       
     }
 }

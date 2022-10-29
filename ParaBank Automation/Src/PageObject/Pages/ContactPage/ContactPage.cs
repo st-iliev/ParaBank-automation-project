@@ -19,17 +19,17 @@ namespace ParaBank_Automation.Src
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/contact.htm";
         
-       
+       public void SendRequest() => sendButton.Click();
 
         public void FilledContactForm(string name, string emial, string phone, string message)
         {
+            ClearContactForm();
             nameField.SendKeys(name);
             emailField.SendKeys(emial);
             phoneField.SendKeys(phone);
             messageField.SendKeys(message);
-            sendButton.Click();
         }
-        public void ClearFields()
+        public void ClearContactForm()
         {
             nameField.Clear();
             emailField.Clear();
