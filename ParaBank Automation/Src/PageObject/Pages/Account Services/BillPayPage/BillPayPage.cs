@@ -24,6 +24,20 @@ namespace ParaBank_Automation.Src
                 List1[i].Clear();
             }
         }
-      
+        public void FillBillPaymentForm(string payeeName, string address, string city, string state, int zipeCode, string phoneNumber, string accountId, string verifyAccountId, int amount, int fromAccountId)
+        {
+            ClearAllFields();
+            payeeNameField.SendKeys(payeeName);
+            addressField.SendKeys(address);
+            cityField.SendKeys(city);
+            stateField.SendKeys(state);
+            zipCodeField.SendKeys(zipeCode.ToString());
+            phoneNumberField.SendKeys(phoneNumber.ToString());
+            accountField.SendKeys(accountId.ToString());
+            verifyAccountField.SendKeys(verifyAccountId.ToString());
+            amountField.SendKeys(amount.ToString());
+            fromAccountField.SendKeys(fromAccountId.ToString());
+            sendPaymentButton.Click();
+        }
     }
 }

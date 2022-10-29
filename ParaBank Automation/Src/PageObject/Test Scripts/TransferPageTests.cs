@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParaBank_Automation.Src
+namespace ParaBank_Automation.Tests
 {
-    public partial class HomePage
+    internal class TransferPageTests 
     {
-
+       
     }
 }

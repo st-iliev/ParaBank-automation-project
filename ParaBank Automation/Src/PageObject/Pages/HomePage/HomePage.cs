@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Src
-{ 
+{
     public partial class HomePage : BasePage
     {
         public HomePage(IWebDriver driver) : base(driver)
@@ -20,6 +20,9 @@ namespace ParaBank_Automation.Src
             usernameField.SendKeys(username);
             passwordField.Clear();
             passwordField.SendKeys(password);
+        }
+        public void LogInButton()
+        {
             loginButton.Click();
         }
 

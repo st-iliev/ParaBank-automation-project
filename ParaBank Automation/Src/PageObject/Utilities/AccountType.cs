@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParaBank_Automation.Src
+namespace ParaBank_Automation.Src.PageObject.Utilities
 {
-    public partial class HomePage
+   public enum AccountType
     {
-
+        CHECKING,
+        SAVINGS
     }
 }
