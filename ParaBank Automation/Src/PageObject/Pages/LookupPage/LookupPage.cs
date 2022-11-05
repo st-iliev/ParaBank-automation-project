@@ -26,14 +26,19 @@ namespace ParaBank_Automation.Src
             zipCodeField.Clear();
             ssnField.Clear();
         }
-        public void FillLookupForm(string firstName,string lastName,string address,string city,string zipCode,string snn)
+        public void FillLookupForm(string firstName,string lastName,string address,string city,string state ,string zipCode,string snn)
         {
             firstNameField.SendKeys(firstName);
             lastNameField.SendKeys(lastName);
             addressField.SendKeys(address);
             cityField.SendKeys(city);
+            stateField.SendKeys(state);
             zipCodeField.SendKeys(zipCode);
             ssnField.SendKeys(snn);
+        }
+        public void ClickOnLoginInfo()
+        {
+            finyMyLoginInfoButton.Click();
         }
     }
 }

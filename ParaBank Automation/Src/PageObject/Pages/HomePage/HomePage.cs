@@ -21,10 +21,22 @@ namespace ParaBank_Automation.Src
             passwordField.Clear();
             passwordField.SendKeys(password);
         }
-        public void LogInButton()
+        public void LogIn()
         {
             loginButton.Click();
         }
-
+        public void OpenNewRegisterForm()
+        {
+            register.Click();
+        }
+        public void ForgotLoginInfo()
+        {
+            forgotLogInInfo.Click();
+        }
+        public void LogOut()
+        {
+            logOut.Click();
+        }
+       
     }
 }

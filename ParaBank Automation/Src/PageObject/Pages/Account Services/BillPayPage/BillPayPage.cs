@@ -18,7 +18,7 @@ namespace ParaBank_Automation.Src
 
         public void ClearAllFields()
         {
-            IList<IWebElement> List1 = driver.FindElements(By.TagName("input"));
+            IList<IWebElement> List1 = Driver.FindElements(By.TagName("input"));
             for (int i = 0; i < List1.Count-1; i++)
             {
                 List1[i].Clear();

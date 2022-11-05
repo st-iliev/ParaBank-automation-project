@@ -11,7 +11,11 @@ namespace ParaBank_Automation.Src
     {
         public void AssertPageTitleIsCorrect()
         {
-            Assert.AreEqual("ParaSoft Demo Website", GetPageTitle());
+            Assert.AreEqual("ParaBank | About Us", GetPageTitle());
+        }
+        public void AssertWarrningTextIsCorrect()
+        {
+            Assert.AreEqual("In other words: ParaBank is not a real bank!",warningText.Text);
         }
     }
 }

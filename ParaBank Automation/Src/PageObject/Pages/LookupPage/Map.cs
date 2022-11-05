@@ -1,9 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualBasic;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ParaBank_Automation.Utilities;
+using Constants = ParaBank_Automation.Utilities.Constants;
 
 namespace ParaBank_Automation.Src
 {
@@ -24,5 +27,8 @@ namespace ParaBank_Automation.Src
         public IWebElement ssnField => WaitAndFindElement(By.XPath("//input[@id='ssn']"));
         public IWebElement ssnErrorMsg => WaitAndFindElement(By.XPath("//span[@id='ssn.errors']"));
         public IWebElement finyMyLoginInfoButton => WaitAndFindElement(By.XPath("//input[@value='Find My Login Info']"));
+        public IWebElement successfullyLoginText => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/p[1]"));
+        public IWebElement usernameInfo => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/p[2]"));
+       
     }
 }

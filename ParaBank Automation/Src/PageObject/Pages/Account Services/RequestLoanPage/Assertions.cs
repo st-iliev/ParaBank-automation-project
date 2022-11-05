@@ -14,7 +14,7 @@ namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.RequestLoanP
         private DateTime dateTime = DateTime.Now;
         public void AssertLoanRequestIsSuccessfuly()
         {
-            Assert.AreEqual("Loan Request Processed", driver.Title);
+            Assert.AreEqual("Loan Request Processed", Driver.Title);
 
         }
         public void AssertLoanRequestProvider()

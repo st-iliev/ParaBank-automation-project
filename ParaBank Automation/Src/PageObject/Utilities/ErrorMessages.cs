@@ -21,7 +21,9 @@ namespace ParaBank_Automation.Utilities
         public const string SSN = "Social Security Number is required.";
         public const string usernamee = "Username is required.";
         public const string password = "Password is required.";
+        public const string existUsername = "This username already exists.";
         public const string confirmPassword = "Password confirmation is required.";
+        public const string passwordNotMatch = "Passwords did not match.";
         public const string enterUsernameAndPassword = "Please enter a username and password.";
         public const string internalError = "An internal error has occurred and has been logged.";
         public const string errorHeadingText = "Error!";

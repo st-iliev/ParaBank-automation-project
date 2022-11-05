@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -19,7 +20,7 @@ namespace ParaBank_Automation.Src
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/contact.htm";
         
-       public void SendRequest() => sendButton.Click();
+        public void SendRequest() => sendButton.Click();
 
         public void FilledContactForm(string name, string emial, string phone, string message)
         {

@@ -11,7 +11,7 @@ namespace ParaBank_Automation.Src
     {
         public IWebElement pageLogo => WaitAndFindElement(By.XPath("//div[@id='topPanel']/img[@class='logo']"));
         public IWebElement homeButton => WaitAndFindElement(By.XPath("//a[contains(text(),'home')]"));
-        public IWebElement aboutUsButton => WaitAndFindElement(By.XPath("//a[contains(text(),'aboutus')]"));
+        public IWebElement aboutUsButton => WaitAndFindElement(By.XPath("//li[@class='aboutus']/a"));
         public IWebElement contactButton => WaitAndFindElement(By.XPath("//a[contains(text(),'contact')]"));
         public IWebElement pageHeading => WaitAndFindElement(By.XPath("//div[@id='rightPanel']/h1"));
         public IWebElement pageText => WaitAndFindElement(By.XPath("//div[@id='rightPanel']/p"));
@@ -46,7 +46,7 @@ namespace ParaBank_Automation.Src
         public IWebElement passwordField => WaitAndFindElement(By.XPath("//input[@name='password']"));
         public IWebElement loginButton => WaitAndFindElement(By.XPath("//input[@class='button']"));
         public IWebElement forgotLogInInfo => WaitAndFindElement(By.XPath("//*[@id='loginPanel']/p[1]/a"));
-        public IWebElement register => WaitAndFindElement(By.XPath("//form[@href='register.htm']"));
+        public IWebElement register => WaitAndFindElement(By.XPath("//*[contains(@href,'register.htm')]"));
 
         public IWebElement solutions => WaitAndFindElement(By.XPath("//div[@class='Solutions']"));
         public IWebElement aboutUs => WaitAndFindElement(By.XPath("//a[@href='about.htm']"));

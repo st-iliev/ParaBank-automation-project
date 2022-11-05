@@ -10,22 +10,23 @@ namespace ParaBank_Automation.Src
         private int elementsTimeout = 10;
         public BasePage(IWebDriver driver)
         {
-            this.driver = driver;
-            waitDriver = new WebDriverWait(driver, TimeSpan.FromSeconds(elementsTimeout));
+            Driver = driver;
+            waitDriver = new WebDriverWait(Driver,TimeSpan.FromSeconds(elementsTimeout));
         }
-        protected IWebDriver driver { get; set; }
+        protected IWebDriver Driver { get; set; }
         protected WebDriverWait waitDriver { get; set; }
         public abstract string PageURL { get; }
-        public void Open() => driver.Navigate().GoToUrl(PageURL);
+        public void Open() => Driver.Navigate().GoToUrl(PageURL);
         protected virtual void WaitForPageLoad()
         {
         }
         protected IWebElement WaitAndFindElement(By locator)
         {
-            WebDriverWait w = new WebDriverWait(driver, TimeSpan.FromSeconds(elementsTimeout));
+            WebDriverWait w = new WebDriverWait(Driver, TimeSpan.FromSeconds(elementsTimeout));
             return w.Until(ExpectedConditions.ElementExists(locator));
         }
-        public string GetPageTitle() => driver.Title;
-        public string GetPageText() => WaitAndFindElement(By.XPath("//h1[@class='title']/p[1]")).Text;
+        public string GetPageTitle() => Driver.Title;
+        public string GetPageHeading() => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/h1")).Text;
+        public string GetPageText() => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/p")).Text;
     }
 }

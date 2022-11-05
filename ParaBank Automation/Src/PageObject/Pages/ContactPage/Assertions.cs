@@ -11,9 +11,9 @@ namespace ParaBank_Automation.Src
 {
     public partial class ContactPage
     {
-        public void AssertRequestSendedSuccessfully()
+        public void AssertCorrectPageIsLoade()
         {
-            Assert.AreEqual("Customer Care", GetPageTitle());
+            Assert.AreEqual("ParaBank | Customer Care", GetPageTitle());
         }
         public void AssertSuccessfullyTextIsCorrect(string name)
         {
@@ -35,6 +35,7 @@ namespace ParaBank_Automation.Src
         {
             Assert.AreEqual(ErrorMessages.message, messageErrorMessage.Text);
         }
+        
 
     }
 }

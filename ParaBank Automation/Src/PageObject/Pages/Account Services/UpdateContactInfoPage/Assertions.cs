@@ -36,7 +36,7 @@ namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.UpdateContac
         }
         public void AssertProfileUpdateSuccessfullyTitle()
         {
-            Assert.AreEqual("Profile Updated", driver.Title);
+            Assert.AreEqual("Profile Updated", Driver.Title);
         }
         public void AssertProfileUpdateSuccessfullyText()
         {

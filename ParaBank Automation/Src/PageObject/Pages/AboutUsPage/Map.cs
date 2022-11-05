@@ -9,6 +9,6 @@ namespace ParaBank_Automation.Src
 {
     public partial class AboutUs
     {
-      
+        public IWebElement warningText => WaitAndFindElement(By.XPath("//*[@id='rightPanel']/p[2]"));
     }
 }
