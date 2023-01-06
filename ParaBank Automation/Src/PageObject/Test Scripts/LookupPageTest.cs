@@ -1,27 +1,26 @@
 ﻿using NUnit.Framework;
 using ParaBank_Automation.Src;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ParaBank_Automation.Utilities;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using ParaBank_Automation.Src.PageObject.Pages;
 
-namespace ParaBank_Automation.Tests
+namespace ParaBank_Automation.Src.PageObject.TestScripts
 {
     public  class LookupPageTest : IDisposable
     {
         private static IWebDriver driver;
         private static HomePage homePage;
         private static LookupPage lookupPage;
+        private static LookupForm lookupForm;
         public LookupPageTest()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             homePage = new HomePage(driver);
             lookupPage = new LookupPage(driver);
+            lookupForm = new LookupForm();
         }
         [Test,Order(1)]
         public void ClickOnFindMyLoginInfo_WhenLookupFormIsEmpty()
@@ -44,7 +43,7 @@ namespace ParaBank_Automation.Tests
         {
             lookupPage.Open();
             lookupPage.CleanLookupForm();
-            lookupPage.FillLookupForm(Constants.firstName, Constants.lastName, Constants.address, Constants.city, Constants.state, Constants.zipCode, Constants.ssn);
+            lookupPage.FillLookupForm(lookupForm);
             lookupPage.ClickOnLoginInfo();
             lookupPage.AssertUserSuccessfullyLogIn();
             lookupPage.AssertUsernameIsCorrect();

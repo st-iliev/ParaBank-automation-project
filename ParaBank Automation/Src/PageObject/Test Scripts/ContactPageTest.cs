@@ -5,7 +5,7 @@ using ParaBank_Automation.Src;
 using ParaBank_Automation.Utilities;
 using System;
 
-namespace ParaBank_Automation.Tests
+namespace ParaBank_Automation.Src.PageObject.TestScripts
 {
     public class ContactPageTest : IDisposable
     {
