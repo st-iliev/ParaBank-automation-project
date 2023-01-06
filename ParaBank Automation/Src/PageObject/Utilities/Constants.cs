@@ -16,12 +16,12 @@ namespace ParaBank_Automation.Utilities
         public const string state = "Colorado";
         public const string zipCode = "1597523";
         public const string phone = "+359889121212";
-        public const string ssn = "123-12-458";
+        public const string SSN = "123-12-458";
         public const string email = "justfortest777@gmail.com";
         public const string message = "Test Message";
         public const string username = "patester";
         public const string password = "patester1";
-        public const string confirmPssword = "patester1";
+        public const string confirmPassword = "patester1";
        
     }
 }
