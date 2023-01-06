@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using ParaBank_Automation.Src.PageObject.Pages.Account_Services.BillPayPage;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -24,19 +25,22 @@ namespace ParaBank_Automation.Src
                 List1[i].Clear();
             }
         }
-        public void FillBillPaymentForm(string payeeName, string address, string city, string state, int zipeCode, string phoneNumber, string accountId, string verifyAccountId, int amount, int fromAccountId)
+        public void FillBillPaymentForm(BillPaymentForm billPaymentForm)
         {
             ClearAllFields();
-            payeeNameField.SendKeys(payeeName);
-            addressField.SendKeys(address);
-            cityField.SendKeys(city);
-            stateField.SendKeys(state);
-            zipCodeField.SendKeys(zipeCode.ToString());
-            phoneNumberField.SendKeys(phoneNumber.ToString());
-            accountField.SendKeys(accountId.ToString());
-            verifyAccountField.SendKeys(verifyAccountId.ToString());
-            amountField.SendKeys(amount.ToString());
-            fromAccountField.SendKeys(fromAccountId.ToString());
+            payeeNameField.SendKeys(billPaymentForm.PayeeName);
+            addressField.SendKeys(billPaymentForm.Address);
+            cityField.SendKeys(billPaymentForm.City);
+            stateField.SendKeys(billPaymentForm.State);
+            zipCodeField.SendKeys(billPaymentForm.ZipCode);
+            phoneNumberField.SendKeys(billPaymentForm.PhoneNumber);
+            accountField.SendKeys(billPaymentForm.Account);
+            verifyAccountField.SendKeys(billPaymentForm.VerifyAccount);
+            amountField.SendKeys(billPaymentForm.Amount);
+            fromAccountField.SendKeys(billPaymentForm.FromAccount);        
+        }
+        public void SendPayment()
+        {
             sendPaymentButton.Click();
         }
     }

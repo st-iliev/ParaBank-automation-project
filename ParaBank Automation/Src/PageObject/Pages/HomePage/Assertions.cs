@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using ParaBank_Automation.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,14 @@ namespace ParaBank_Automation.Src
         {
             Assert.AreEqual("ParaBank | Customer Care", GetPageTitle());
         }
-
+        public void AssertUserIsNotLogIn()
+        {
+            Assert.That(usernameField.Displayed);
+            Assert.That(passwordField.Displayed);
+        }
+        public void AssertUserIsLogIn()
+        {
+            Assert.AreEqual(SuccessMessages.welcome, welcomeUserText.Text);
+        }
     }
 }

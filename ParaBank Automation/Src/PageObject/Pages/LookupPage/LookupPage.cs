@@ -1,9 +1,5 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ParaBank_Automation.Src.PageObject.Pages;
 
 namespace ParaBank_Automation.Src
 {
@@ -26,15 +22,15 @@ namespace ParaBank_Automation.Src
             zipCodeField.Clear();
             ssnField.Clear();
         }
-        public void FillLookupForm(string firstName,string lastName,string address,string city,string state ,string zipCode,string snn)
+        public void FillLookupForm(LookupForm lookupForm)
         {
-            firstNameField.SendKeys(firstName);
-            lastNameField.SendKeys(lastName);
-            addressField.SendKeys(address);
-            cityField.SendKeys(city);
-            stateField.SendKeys(state);
-            zipCodeField.SendKeys(zipCode);
-            ssnField.SendKeys(snn);
+            firstNameField.SendKeys(lookupForm.FirstName);
+            lastNameField.SendKeys(lookupForm.LastName);
+            addressField.SendKeys(lookupForm.Address);
+            cityField.SendKeys(lookupForm.City);
+            stateField.SendKeys(lookupForm.State);
+            zipCodeField.SendKeys(lookupForm.ZipCode);
+            ssnField.SendKeys(lookupForm.SSN);
         }
         public void ClickOnLoginInfo()
         {

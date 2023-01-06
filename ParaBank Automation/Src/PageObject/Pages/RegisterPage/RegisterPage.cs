@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using ParaBank_Automation.Src.PageObject.Pages.RegisterPage;
+using ParaBank_Automation.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,19 +18,19 @@ namespace ParaBank_Automation.Src
 
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/register.htm";
-        public void FillRegisterForm(string firstName,string lastName,string address,string city,string state,string zipeCode,string phoneNumber,string ssn,string username,string password,string confirmPassword)
+        public virtual void FillRegisterForm(RegistrationForm registrationForm)
         {
-            firstNameField.SendKeys(firstName);
-            lastNameField.SendKeys(lastName);
-            addressField.SendKeys(address);
-            cityField.SendKeys(city);
-            stateField.SendKeys(state);
-            zipCodeField.SendKeys(zipeCode);
-            phoneNumberField.SendKeys(phoneNumber);
-            ssnField.SendKeys(ssn);
-            usernameField.SendKeys(username);
-            passwordField.SendKeys(password);
-            confirmField.SendKeys(confirmPassword);
+            firstNameField.SendKeys(registrationForm.FirstName);
+            lastNameField.SendKeys(registrationForm.LastName);
+            addressField.SendKeys(registrationForm.Address);
+            cityField.SendKeys(registrationForm.City);
+            stateField.SendKeys(registrationForm.State);
+            zipCodeField.SendKeys(registrationForm.ZipCode);
+            phoneNumberField.SendKeys(registrationForm.PhoneNumber);
+            ssnField.SendKeys(registrationForm.SSN);
+            usernameField.SendKeys(registrationForm.Username);
+            passwordField.SendKeys(registrationForm.Password);
+            confirmField.SendKeys(registrationForm.ConfirmPassword);
         }
         public void ClickOnRegister()
         {

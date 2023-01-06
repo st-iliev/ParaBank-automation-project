@@ -1,11 +1,5 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium.DevTools.V104.Database;
 using ParaBank_Automation.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParaBank_Automation.Src
 {
