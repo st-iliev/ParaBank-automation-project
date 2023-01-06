@@ -5,7 +5,7 @@ using ParaBank_Automation.Src;
 using System.Threading;
 using System;
 
-namespace ParaBank_Automation.Tests
+namespace ParaBank_Automation.Src.PageObject.TestScripts
 {
     public class FooterPanelTests : IDisposable
     {

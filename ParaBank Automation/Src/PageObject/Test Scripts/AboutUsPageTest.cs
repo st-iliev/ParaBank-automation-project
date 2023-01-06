@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 
-namespace ParaBank_Automation.Tests
-{
+namespace ParaBank_Automation.Src.PageObject.TestScripts
+{ 
     public class AboutUsPageTest : IDisposable
     {
         private static IWebDriver driver;
