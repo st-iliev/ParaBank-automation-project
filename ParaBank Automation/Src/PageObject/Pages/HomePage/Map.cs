@@ -16,22 +16,7 @@ namespace ParaBank_Automation.Src
         public IWebElement pageHeading => WaitAndFindElement(By.XPath("//div[@id='rightPanel']/h1"));
         public IWebElement pageText => WaitAndFindElement(By.XPath("//div[@id='rightPanel']/p"));
 
-        public IWebElement atmServices => WaitAndFindElement(By.XPath("ul[@class='services']/li[@class='captionone']"));
-        public IWebElement withdrawFunds => WaitAndFindElement(By.XPath("ul[@class='services']/li[2]"));
-        public IWebElement transferFunds => WaitAndFindElement(By.XPath("ul[@class='services']/li[3]"));
-        public IWebElement checkBalances => WaitAndFindElement(By.XPath("ul[@class='services']/li[4]"));
-        public IWebElement makeDeposit => WaitAndFindElement(By.XPath("ul[@class='services']/li[5]"));
-        public IWebElement onlineServices => WaitAndFindElement(By.XPath("ul[@class='servicestwo']/li[@class='captiontwo']"));
-        public IWebElement billPay => WaitAndFindElement(By.XPath("ul[@class='servicestwo']/li[2]"));
-        public IWebElement accountHistory => WaitAndFindElement(By.XPath("ul[@class='servicestwo']/li[3]"));
-        public IWebElement onlineTransferFunds => WaitAndFindElement(By.XPath("ul[@class='servicestwo']/li[4]"));
-        public IWebElement readMore => WaitAndFindElement(By.XPath("ul[@class='servicestwo']/a[@href='services.htm'"));
-        public IWebElement latestNews => WaitAndFindElement(By.XPath("ul[@class='events']/li[@class='captionthree']"));
-        public IWebElement newsOne => WaitAndFindElement(By.XPath("ul[@class='events']/li[2]"));
-        public IWebElement newsTwo => WaitAndFindElement(By.XPath("ul[@class='events']/li[3]"));
-        public IWebElement newsThree => WaitAndFindElement(By.XPath("ul[@class='events']/li[4]"));
-        public IWebElement newsReadMore => WaitAndFindElement(By.XPath("ul[@class='events']/a[href='news.htm']"));
-
+        public IWebElement welcomeUserText => WaitAndFindElement(By.XPath("//*[@id='leftPanel']/p"));
         public IWebElement openNewAccount => WaitAndFindElement(By.XPath("//a[contains(@href,'openaccount')]"));
         public IWebElement accountOverview => WaitAndFindElement(By.XPath("//a[contains(@href,'overview')]"));
         public IWebElement accTransferFunds => WaitAndFindElement(By.XPath("//a[contains(@href,'transfer')]"));

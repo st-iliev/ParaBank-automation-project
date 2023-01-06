@@ -1,9 +1,6 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualBasic;
+using OpenQA.Selenium;
+using Constants = ParaBank_Automation.Utilities.Constants;
 
 namespace ParaBank_Automation.Src
 {
@@ -14,29 +11,20 @@ namespace ParaBank_Automation.Src
 
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/index.htm";
-        public void FilledLogInForm(string username, string password)
+        public void FilledLogInForm()
         {
             usernameField.Clear();
-            usernameField.SendKeys(username);
+            usernameField.SendKeys(Constants.username);
             passwordField.Clear();
-            passwordField.SendKeys(password);
+            passwordField.SendKeys(Constants.password);
         }
-        public void LogIn()
-        {
-            loginButton.Click();
-        }
-        public void OpenNewRegisterForm()
-        {
-            register.Click();
-        }
-        public void ForgotLoginInfo()
-        {
-            forgotLogInInfo.Click();
-        }
-        public void LogOut()
-        {
-            logOut.Click();
-        }
+        public void LogIn() => loginButton.Click();
+       
+        public void OpenNewRegisterForm() => register.Click();
+       
+        public void ForgotLoginInfo() => forgotLogInInfo.Click();
+        
+        public void LogOut() => logOut.Click();
        
     }
 }
