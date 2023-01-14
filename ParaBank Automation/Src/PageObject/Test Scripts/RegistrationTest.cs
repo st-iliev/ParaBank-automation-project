@@ -46,7 +46,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
             homePage.Open();
             homePage.OpenNewRegisterForm();
             registerPage.ClearRegisterForm();
-            registrationForm.ConfirmPassword =  "a7GUH320ZR";
+            registrationForm.ConfirmPassword = "a7GUH320ZR";
             registerPage.FillRegisterForm(registrationForm);
             registerPage.ClickOnRegister();
             registerPage.AssertCorrectConfirmPasswordNotMatchErrorMessage();
