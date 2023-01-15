@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.UpdateContactInfoPage
+namespace ParaBank_Automation.Src
 {
     public partial class UpdateContactInfoPage : BasePage
     {
@@ -15,30 +15,37 @@ namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.UpdateContac
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/updateprofile.htm";
 
-        public void FillUpdateProfileForm(string firstName, string lastName, string address, string city, string state, int zipCode, string phoneNumber)
+        public void FillUpdateProfileForm(ProfileForm profileForm)
         {
             firstNameField.Clear();
-            firstNameField.SendKeys(firstName);
+            firstNameField.SendKeys(profileForm.FirstName);
             lastNameField.Clear();
-            lastNameField.SendKeys(lastName);
+            lastNameField.SendKeys(profileForm.LastName);
             addressField.Clear();
-            addressField.SendKeys(address);
+            addressField.SendKeys(profileForm.Address);
             cityField.Clear();
-            cityField.SendKeys(city);
+            cityField.SendKeys(profileForm.City);
             stateField.Clear();
-            stateField.SendKeys(state);
+            stateField.SendKeys(profileForm.State);
             zipeCodeField.Clear();
-            zipeCodeField.SendKeys(zipCode.ToString());
+            zipeCodeField.SendKeys(profileForm.ZipCode);
             phoneNumberField.Clear();
-            phoneNumberField.SendKeys(phoneNumber);
+            phoneNumberField.SendKeys(profileForm.PhoneNumber);
         }
-        public void ClickOnUpdateButton()
+        public void ClearForm()
         {
-            updateProfileButton.Click();
+            firstNameField.Clear();
+            lastNameField.Clear();
+            addressField.Clear();
+            cityField.Clear();
+            stateField.Clear();
+            zipeCodeField.Clear();
+            phoneNumberField.Clear();
         }
-        protected override void WaitForPageLoad()
+        public override void HoverAndClick(IWebElement elemenet)
         {
-            WaitAndFindElement(By.XPath("//h1[@class='title']"));
+            base.HoverAndClick(elemenet);
         }
+
     }
 }

@@ -43,5 +43,9 @@ namespace ParaBank_Automation.Src
         {
             sendPaymentButton.Click();
         }
+        public override void HoverAndClick(IWebElement elemenet)
+        {
+            base.HoverAndClick(elemenet);
+        }
     }
 }
