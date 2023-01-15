@@ -60,7 +60,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
             billPaymentForm.Amount = "50";
             billPaymentForm.FromAccount = account;
             billPayPage.FillBillPaymentForm(billPaymentForm);
-            billPayPage.Hovering(billPayPage.sendPaymentButton);
+            billPayPage.HoverAndClick(billPayPage.sendPaymentButton);
             accountOverview.Open();
             Thread.Sleep(500);
             string accountBalanceAfterPaymenet = accountOverview.allBalances[0].Text;

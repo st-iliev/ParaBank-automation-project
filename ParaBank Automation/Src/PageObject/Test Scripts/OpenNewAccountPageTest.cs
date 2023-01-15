@@ -36,7 +36,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             string firstAccountId = accountOverview.allAccounts[0].Text;
             openAccountPage.Open();
             openAccountPage.OpenNewAccount(AccountType.CHECKING, firstAccountId);
-            openAccountPage.Hovering(openAccountPage.openNewAccountButton);
+            openAccountPage.HoverAndClick(openAccountPage.openNewAccountButton);
             string newAccountId = openAccountPage.newAccountId.Text;
             openAccountPage.AssertNewAccountIsSuccessfullyOpened();
             accountOverview.Open();
@@ -50,7 +50,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             string firstAccountId = accountOverview.allAccounts[0].Text;
             openAccountPage.Open();
             openAccountPage.OpenNewAccount(AccountType.SAVINGS, firstAccountId);
-            openAccountPage.Hovering(openAccountPage.openNewAccountButton);
+            openAccountPage.HoverAndClick(openAccountPage.openNewAccountButton);
             string newAccountId = openAccountPage.newAccountId.Text;
             openAccountPage.AssertNewAccountIsSuccessfullyOpened();
             accountOverview.Open();
