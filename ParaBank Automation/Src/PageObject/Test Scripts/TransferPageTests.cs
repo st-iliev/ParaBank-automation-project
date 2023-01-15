@@ -32,7 +32,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
         public void Transfer_WithEmptyAmountField()
         {
             transferPage.Open();
-            transferPage.Hovering(transferPage.transferButton);
+            transferPage.HoverAndClick(transferPage.transferButton);
             transferPage.AssertEmptyAmountErrorIsDisplayed();
 
         }
@@ -46,7 +46,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             transferPage.FillTransferFundsForm(50, mainAccount, lastAccount);
             transferPage.amountField.Clear();
             transferPage.amountField.SendKeys("3,5");
-            transferPage.Hovering(transferPage.transferButton);
+            transferPage.HoverAndClick(transferPage.transferButton);
             transferPage.AssertInvalidAmountErrorIsDisplayed();
         }
         [Test]
@@ -61,7 +61,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             string lastAccount = accountOverview.allAccounts[accountOverview.allAccounts.Count - 1].Text;
             transferPage.Open();
             transferPage.FillTransferFundsForm(amount, mainAccount, lastAccount);
-            transferPage.Hovering(transferPage.transferButton);
+            transferPage.HoverAndClick(transferPage.transferButton);
             transferPage.AssertTransferIsCompleted(amount, mainAccount, lastAccount);
             accountOverview.Open();
             Thread.Sleep(500);
