@@ -11,11 +11,11 @@ namespace ParaBank_Automation.Utilities
     {
         public const string firstName = "Yanis";
         public const string lastName = "Yanisov";
-        public const string address = "Hunting str.";
+        public const string address = "Hunting str";
         public const string city = "Bornemu";
         public const string state = "Colorado";
         public const string zipCode = "1597523";
-        public const string phone = "+359889121212";
+        public const string phone = "(335) 984-5713";
         public const string SSN = "123-12-458";
         public const string email = "justfortest777@gmail.com";
         public const string message = "Test Message";
