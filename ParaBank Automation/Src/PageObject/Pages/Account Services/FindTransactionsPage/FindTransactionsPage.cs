@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,35 +15,43 @@ namespace ParaBank_Automation.Src
 
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/findtrans.htm";
-        public void SelectAnAccount(int accountId)
+        public override string GetPageText() => WaitAndFindElements(By.XPath("//*[@id='rightPanel']/div/div/p")).Text;
+       
+
+        public void SelectAnAccount(string accountId)
         {
-            selectAccountId.SendKeys(accountId.ToString());
+            SelectElement toAccountSelect = new SelectElement(selectAccountId);
+            toAccountSelect.SelectByValue(accountId);
         }
-        public void FindTransactionById(int id)
+        public void FindTransactionById(string id)
         {
-            findByTransIdField.Clear();
-            findByTransIdField.SendKeys(id.ToString());
-            findTransIdButton.Click();
+            findByIdField.Clear();
+            findByIdField.SendKeys(id);
+            
         }
-        public void FindTransactionByDate(DateTime date)
+        public void FindTransactionByDate(string date)
         {
             findByDateField.Clear();
-            findByDateField.SendKeys(date.ToString());
-            findByDateButton.Click();
+            findByDateField.SendKeys(date);
+            
         }
-        public void FindTransactionByDateRange(DateTime fromDate, DateTime toDate)
+        public void FindTransactionByDateRange(string fromDate, string toDate)
         {
             findByDateRangeFromDateField.Clear();
-            findByDateRangeFromDateField.SendKeys(fromDate.ToString());
+            findByDateRangeFromDateField.SendKeys(fromDate);
             findByDateRangeToDateField.Clear();
-            findByDateRangeToDateField.SendKeys(toDate.ToString());
-            findByDateRangeButton.Click();
+            findByDateRangeToDateField.SendKeys(toDate);
+            
         }
-        public void FindTransactionByAmount(int amount)
+        public void FindTransactionByAmount(string amount)
         {
             findByAmountField.Clear();
-            findByAmountField.SendKeys(amount.ToString());
-            findByAmountButton.Click();
+            findByAmountField.SendKeys(amount);
         }
+        public override void HoverAndClick(IWebElement elemenet)
+        {
+            base.HoverAndClick(elemenet);
+        }
+        
     }
 }

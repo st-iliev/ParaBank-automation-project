@@ -6,10 +6,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.UpdateContactInfoPage
+namespace ParaBank_Automation.Src
 {
     public partial class UpdateContactInfoPage
     {
+        public void AssertFirstNameIsCorrect()
+        {
+           
+            Assert.AreEqual(Constants.firstName, firstNameField.GetAttribute("value"));
+        } 
+        public void AssertFirstNameIsChanged()
+        {
+            Assert.That(firstNameField.Text, Is.Not.EqualTo(Constants.firstName));
+        }
+        public void AssertLastNameIsCorrect()
+        {
+            Assert.AreEqual(Constants.lastName, lastNameField.GetAttribute("value"));
+        }
+        public void AssertLastNameIsChanged()
+        {
+            Assert.That(lastNameField.Text, Is.Not.EqualTo(Constants.lastName));
+        }
+        public void AssertAddressIsCorrect()
+        {
+            Assert.AreEqual(Constants.address, addressField.GetAttribute("value"));
+        }
+        public void AssertAddressIsChanged()
+        {
+            Assert.That(addressField.Text, Is.Not.EqualTo(Constants.address));
+        }
+        public void AssertCityIsCorrect()
+        {
+            Assert.AreEqual(Constants.city, cityField.GetAttribute("value"));
+        } 
+        public void AssertCityIsChanged()
+        {
+            Assert.That(cityField.Text, Is.Not.EqualTo(Constants.city));
+        }
+        public void AssertStateIsCorrect()
+        {
+            Assert.AreEqual(Constants.state, stateField.GetAttribute("value"));
+        }
+        public void AssertStateIsChanged()
+        {
+            Assert.That(stateField.Text, Is.Not.EqualTo(Constants.state));
+        }
+        public void AssertZipCodeIsCorrect()
+        {
+            Assert.AreEqual(Constants.zipCode, zipeCodeField.GetAttribute("value"));
+        }
+        public void AssertZipCodeIsChanged()
+        {
+            Assert.That(zipeCodeField.Text, Is.Not.EqualTo(Constants.zipCode));
+        }
+        public void AssertPhoneNumberIsCorrect()
+        {
+            Assert.AreEqual(Constants.phone, phoneNumberField.GetAttribute("value"));
+        }
         public void AssertFirstNameErrorMessageIsDisplayed()
         {
             Assert.AreEqual(ErrorMessages.firstName, firstNameErrorMessage.Text);
@@ -30,13 +83,13 @@ namespace ParaBank_Automation.Src.PageObject.Pages.Account_Services.UpdateContac
         {
             Assert.AreEqual(ErrorMessages.state, stateErrorMessage.Text);
         }
-        public void AssertZipeCodeErrorMessageIsDisplayed()
+        public void AssertZipCodeErrorMessageIsDisplayed()
         {
-            Assert.AreEqual(ErrorMessages.zipCode, zipeCodeErrorMessage.Text);
+            Assert.AreEqual(ErrorMessages.zipCode, zipCodeErrorMessage.Text);
         }
         public void AssertProfileUpdateSuccessfullyTitle()
         {
-            Assert.AreEqual("Profile Updated", Driver.Title);
+            Assert.AreEqual("ParaBank | Update Profile", Driver.Title);
         }
         public void AssertProfileUpdateSuccessfullyText()
         {

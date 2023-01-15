@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using NUnit.Core.Extensibility;
+using NUnit.Framework;
 using ParaBank_Automation.Utilities;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,18 @@ namespace ParaBank_Automation.Src
 {
     public partial class TransferPage
     {
-        public void AssertAmountErrorIsDisplayed()
+        public void AssertEmptyAmountErrorIsDisplayed()
         {
-            Assert.AreEqual(ErrorMessages.amount, amountErrorMessage.Text);
+            Assert.AreEqual(ErrorMessages.emptyAmount, emptyAmountError.Text);
         }
-        public void AssertTransferIsCompleted(int amount, int fromAccountId, int toAccountId)
+        public void AssertInvalidAmountErrorIsDisplayed()
         {
-            Assert.AreEqual(string.Format(SuccessMessages.transferComplete,amount.ToString(),fromAccountId.ToString(),toAccountId.ToString()), GetPageText());
+            Assert.AreEqual(ErrorMessages.invalidAmount, invalidAmountError.Text);
+        }
+
+        public void AssertTransferIsCompleted(double amount, string fromAccountId, string toAccountId)
+        {
+            Assert.AreEqual(string.Format(SuccessMessages.transferComplete,amount,fromAccountId,toAccountId), GetPageText());
         }
     }
 }

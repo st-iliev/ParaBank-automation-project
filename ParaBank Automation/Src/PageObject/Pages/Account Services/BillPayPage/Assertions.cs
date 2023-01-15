@@ -52,7 +52,7 @@ namespace ParaBank_Automation.Src
         }
         public void AssertAmountErrorMessage()
         {
-            Assert.AreEqual(ErrorMessages.amount, emptyAmountErrorMessage.Text);
+            Assert.AreEqual(ErrorMessages.emptyAmount, emptyAmountErrorMessage.Text);
         }
         public void AssertInvalidAmountErrorMessage()
         {

@@ -15,12 +15,15 @@ namespace ParaBank_Automation.Src
         }
         public override string PageURL => "https://parabank.parasoft.com/parabank/openaccount.htm";
 
-        public void OpenNewAccount(AccountType type, int accountID)
+        public void OpenNewAccount(AccountType type, string accountID)
         {
             accountType.SendKeys(type.ToString());
-            fromAccountId.SendKeys(accountID.ToString());
-            openNewAccountButton.Click();
+            fromAccountId.SendKeys(accountID);
         }
-      
+        public override void HoverAndClick(IWebElement elemenet)
+        {
+            base.HoverAndClick(elemenet);
+        }
+        public override string GetPageText() => WaitAndFindElements(By.XPath("//*[@id='rightPanel']/div/div/p[1]")).Text;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
 using ParaBank_Automation.Utilities;
 
 namespace ParaBank_Automation.Src
@@ -10,5 +9,6 @@ namespace ParaBank_Automation.Src
         {
             Assert.AreEqual(SuccessMessages.newAccount, GetPageText());
         }
+       
     }
 }
