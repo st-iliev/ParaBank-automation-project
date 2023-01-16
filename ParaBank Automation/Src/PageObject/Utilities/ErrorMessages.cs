@@ -27,7 +27,8 @@ namespace ParaBank_Automation.Utilities
         public const string enterUsernameAndPassword = "Please enter a username and password.";
         public const string internalError = "An internal error has occurred and has been logged.";
         public const string errorHeadingText = "Error!";
-        public const string amount = "The amount cannot be empty.";
+        public const string emptyAmount = "The amount cannot be empty.";
+       
         public const string payeeName = "Payee name is required.";
         public const string phoneNumber = "Phone number is required.";
         public const string accountNumber = "Account number is required.";
@@ -35,5 +36,7 @@ namespace ParaBank_Automation.Utilities
         public const string invalidNumber = "Please enter a valid number.";
         public const string invalidAmount = "Please enter a valid amount.";
         public const string downPayment = "We cannot grant a loan in that amount with your available funds and down payment.";
+        public const string downPaymentIsUnderRequired = "We cannot grant a loan in that amount with the given down payment.";
+        public const string notEnoughFunds = "You do not have sufficient funds for the given down payment.";
     }
 }
