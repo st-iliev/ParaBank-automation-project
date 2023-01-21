@@ -26,7 +26,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         public void ClickOnRegisterButton_WhenRegisterFormIsEmpty()
         {
             homePage.Open();
-            homePage.OpenNewRegisterForm();
+           homePage.HoverAndClick(homePage.register);
             registerPage.ClearRegisterForm();
             registerPage.ClickOnRegister();
             registerPage.AssertCorrectFirstNameErrorMessage();
@@ -44,7 +44,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         public void RegisterNewUser_WithWrongConfirmPassword()
         {
             homePage.Open();
-            homePage.OpenNewRegisterForm();
+           homePage.HoverAndClick(homePage.register);
             registerPage.ClearRegisterForm();
             registrationForm.ConfirmPassword = "a7GUH320ZR";
             registerPage.FillRegisterForm(registrationForm);
@@ -56,18 +56,18 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         public void RegisterNewUser_WithValidData()
         {
             homePage.Open();
-            homePage.OpenNewRegisterForm();
+           homePage.HoverAndClick(homePage.register);
             registerPage.ClearRegisterForm();        
             registerPage.FillRegisterForm(registrationForm);
             registerPage.ClickOnRegister();
             homePage.AssertUserIsLogIn();
-            homePage.LogOut();
+            homePage.HoverAndClick(homePage.logOut);
         }
         [Test,Order(2)]
        public void RegisterExsistingUser()
         {
             homePage.Open();
-            homePage.OpenNewRegisterForm();
+           homePage.HoverAndClick(homePage.register);
             registerPage.ClearRegisterForm();
             registerPage.FillRegisterForm(registrationForm);
             registerPage.ClickOnRegister();

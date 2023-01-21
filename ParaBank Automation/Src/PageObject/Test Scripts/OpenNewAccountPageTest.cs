@@ -20,20 +20,20 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             homePage = new HomePage(driver);
             accountOverview = new AccountOverview(driver);
             openAccountPage = new OpenAccountPage(driver);
-            
+
         }
         [OneTimeSetUp]
         public void LogIn()
         {
             homePage.Open();
             homePage.FilledLogInForm();
-            homePage.LogIn();
+            homePage.HoverAndClick(homePage.loginButton);
         }
         [Test]
         public void OpenNew_Checking_Account()
         {
             accountOverview.Open();
-            string firstAccountId = accountOverview.allAccounts[0].Text;
+            string firstAccountId = accountOverview.mainAccount.Text;
             openAccountPage.Open();
             openAccountPage.OpenNewAccount(AccountType.CHECKING, firstAccountId);
             openAccountPage.HoverAndClick(openAccountPage.openNewAccountButton);
@@ -41,13 +41,13 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
             openAccountPage.AssertNewAccountIsSuccessfullyOpened();
             accountOverview.Open();
             accountOverview.AssertCheckingNewAccountId_IsContainedInList(newAccountId);
-           
+
         }
         [Test]
         public void OpenNew_Saving_Account()
         {
             accountOverview.Open();
-            string firstAccountId = accountOverview.allAccounts[0].Text;
+            string firstAccountId = accountOverview.mainAccount.Text;
             openAccountPage.Open();
             openAccountPage.OpenNewAccount(AccountType.SAVINGS, firstAccountId);
             openAccountPage.HoverAndClick(openAccountPage.openNewAccountButton);

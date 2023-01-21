@@ -34,7 +34,7 @@ namespace ParaBank_Automation.Src
         {
             homePage.Open();
             homePage.FilledLogInForm();
-            homePage.LogIn();
+            homePage.HoverAndClick(homePage.loginButton);
         }
         [Test]
         public void OpenContactForm_AndVerifyThatInformationIsCorrect()
