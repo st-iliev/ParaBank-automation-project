@@ -108,7 +108,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         {
             siteMapPage.Open();
             siteMapPage.logOut.Click();
-            homePage.AssertUserIsNotLogIn();
+            homePage.AssertUserIsLogOut();
         }
         [Test,Order(1)]
         public void LogInUser_FromSiteMapPage()
@@ -172,7 +172,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         {
             siteMapPage.Open();
             siteMapPage.logOut.Click();
-            homePage.AssertUserIsNotLogIn();
+            homePage.AssertUserIsLogOut();
         }
         public void Dispose()
         {

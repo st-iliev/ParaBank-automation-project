@@ -26,7 +26,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         public void ClickOnFindMyLoginInfo_WhenLookupFormIsEmpty()
         {
             homePage.Open();
-            homePage.ForgotLoginInfo();
+            homePage.HoverAndClick(homePage.forgotLogInInfo);
             lookupPage.CleanLookupForm();
             lookupPage.ClickOnLoginInfo();
             lookupPage.AssertCorrectFirstNameErrorMessage();
@@ -48,7 +48,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
             lookupPage.AssertUserSuccessfullyLogIn();
             lookupPage.AssertUsernameIsCorrect();
             lookupPage.AssertPasswordIsCorrect();
-            homePage.LogOut();
+            homePage.HoverAndClick(homePage.logOut);
         }
         public void Dispose()
         {

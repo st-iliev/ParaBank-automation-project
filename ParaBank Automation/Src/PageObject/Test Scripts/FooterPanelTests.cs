@@ -23,56 +23,56 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         {
             homePage.Open();
             homePage.footerHome.Click();
-            homePage.AssertOpenCorrectPageFromFooterHomeLink();
+            homePage.AssertOpenCorrectHomePage();
         }
         [Test]
         public void OpenAboutUsPage()
         {
             homePage.Open();
             homePage.footerAboutUs.Click();
-            homePage.AssertOpenCorrectPageFromFooterAboutUsLink();
+            homePage.AssertOpenCorrectAboutUsPage();
         }
         [Test]
         public void OpenServicesPage()
         {
             homePage.Open();
             homePage.footerServices.Click();
-            homePage.AssertOpenCorrectPageFromFooterServicesLink();
+            homePage.AssertOpenCorrectServicesPage();
         }
         [Test]
         public void OpenProductsPage()
         {
             homePage.Open();
             homePage.footerProducts.Click();
-            homePage.AssertOpenCorrectPageFromFooterProductsLink();
+            homePage.AssertOpenCorrectProductsPage();
         }
         [Test]
         public void OpenLocationsPage()
         {
             homePage.Open();
             homePage.footerLocations.Click();
-            homePage.AssertOpenCorrectPageFromFooterLocationsLink();
+            homePage.AssertOpenCorrectLocationsPage();
         }
         [Test]
         public void OpenForumPage()
         {
             homePage.Open();
             homePage.footerForum.Click();
-            homePage.AssertOpenCorrectPageFromFooterForumLink();
+            homePage.AssertOpenCorrectForumPage();
         }
         [Test]
         public void OpenSiteMapPage()
         {
             homePage.Open();
             homePage.footerSiteMap.Click();
-            homePage.AssertOpenCorrectPageFromFooterSiteMapLink();
+            homePage.AssertOpenCorrectSiteMapPage();
         }
         [Test]
         public void OpenContactUsPage()
         {
             homePage.Open();
             homePage.footerContactUs.Click();
-            homePage.AssertOpenCorrectPageFromFooterContactUsLink();
+            homePage.AssertOpenCorrectContactUsPage();
         }
         public void Dispose()
         {

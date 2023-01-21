@@ -30,7 +30,7 @@ namespace ParaBank_Automation.Src.PageObject.TestScripts
         {
             homePage.Open();
             homePage.FilledLogInForm();
-            homePage.LogIn();
+            homePage.HoverAndClick(homePage.loginButton);
         }
         [Test]
         public void ClickOnSendPayment_When_PaymenetFormIsEmpty()

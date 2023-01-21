@@ -46,7 +46,7 @@ namespace ParaBank_Automation.Src.PageObject.Test_Scripts
         {
             homePage.Open();
             homePage.FilledLogInForm();
-            homePage.LogIn();
+            homePage.HoverAndClick(homePage.loginButton);
         }
         [Test]
         public void Search_WithValidTransactionId()
