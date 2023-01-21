@@ -18,13 +18,23 @@ namespace ParaBank_Automation.Src
             passwordField.Clear();
             passwordField.SendKeys(Constants.password);
         }
-        public void LogIn() => loginButton.Click();
-       
-        public void OpenNewRegisterForm() => register.Click();
-       
-        public void ForgotLoginInfo() => forgotLogInInfo.Click();
-        
-        public void LogOut() => logOut.Click();
+
+        public bool UserIsLogin()
+        {
+            if (welcomeUserText.Displayed)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool UserIsLogOut()
+        {
+            if (usernameField.Displayed && passwordField.Displayed)
+            {
+                return true;
+            }
+            return false;
+        }
        
     }
 }
